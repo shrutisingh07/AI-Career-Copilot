@@ -1,3 +1,4 @@
+--only-binary=:all:
 streamlit==1.36.0
 pypdf==4.0.1
 pandas==2.2.2
