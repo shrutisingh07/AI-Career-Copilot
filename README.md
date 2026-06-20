@@ -32,15 +32,15 @@ https://airesumeanalyzer-urawcyzcnwczpa8ftrte7h.streamlit.app/
 ## Screenshots
 
 ### Home Page
-![Home Page](home page.png)
+![Home Page](<img width="959" height="485" alt="home page" src="https://github.com/user-attachments/assets/4dedc62b-97f7-433e-91d2-5aae8de7aeea" />
 
 
 ### Resume Analysis
-![Analysis](Resume analysis.png)
+![Analysis](<img width="959" height="483" alt="Resume analysis" src="https://github.com/user-attachments/assets/a07c93e4-30c3-4bb2-a27f-111f88c5bee5" />
+
 
 ### Skills Extraction
 ![Skills](<img width="959" height="484" alt="Skills extracted , recommendations" src="https://github.com/user-attachments/assets/830e0c05-c328-4e24-81db-09ee3c996116" />
-.png)
 
 ## Future Improvements
 
