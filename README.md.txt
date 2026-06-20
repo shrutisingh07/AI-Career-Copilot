@@ -29,10 +29,6 @@ https://airesumeanalyzer-urawcyzcnwczpa8ftrte7h.streamlit.app/
 3. Skills and relevant information are identified.
 4. Insights and recommendations are displayed to the user.
 
-## Screenshots
-
-Add screenshots of your application here.
-
 ## Future Improvements
 
 * ATS Score Calculation
