@@ -1,4 +1,4 @@
-# AI Resume Analyzer
+# AI Career Copilot 
 
 An AI-powered web application that analyzes resumes, extracts key skills, and provides insights to help improve job applications.
 
