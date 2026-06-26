@@ -29,6 +29,17 @@ except:
 
 st.sidebar.title("AI Career Copilot")
 
+from pypdf import PdfReader
+
+from ats import extract_skills
+from ats import calculate_ats
+
+# -----------------------------
+# Sidebar Navigation
+# -----------------------------
+st.sidebar.title("🤖 AI Resume Analyzer")
+
+
 menu = st.sidebar.radio(
     "Navigation",
     [
@@ -38,6 +49,7 @@ menu = st.sidebar.radio(
         "ℹ️ About Project"
     ]
 )
+
 
 # =========================
 # UPLOAD RESUME PAGE
@@ -87,6 +99,29 @@ if menu == "📄 Upload Resume":
 
     if uploaded_file is not None:
 
+# -----------------------------
+# Upload Resume Page
+# -----------------------------
+if menu == "📄 Upload Resume":
+
+    st.markdown("""
+    # 🤖 AI Resume Analyzer
+
+    ### Smart ATS Score Predictor & Career Assistant
+    """)
+
+    uploaded_file = st.file_uploader(
+        "Upload Resume PDF",
+        type="pdf"
+    )
+
+    job_description = st.text_area(
+        "Paste Job Description Here"
+    )
+
+    if uploaded_file:
+
+
         pdf = PdfReader(uploaded_file)
 
         resume_text = ""
@@ -99,6 +134,7 @@ if menu == "📄 Upload Resume":
 
         resume_skills = extract_skills(resume_text)
 
+
         st.markdown("---")
         st.subheader("🛠 Skills Detected")
 
@@ -108,6 +144,13 @@ if menu == "📄 Upload Resume":
 
             for i, skill in enumerate(resume_skills):
                 skill_cols[i % 3].success(skill)
+
+
+        st.subheader("✅ Skills Found")
+
+        if resume_skills:
+            for skill in resume_skills:
+                st.success(skill)
 
         else:
             st.warning("No skills detected.")
@@ -121,14 +164,26 @@ if menu == "📄 Upload Resume":
                 job_skills
             )
 
+
             # Save ATS score history
             with open("history.txt", "a") as file:
                 file.write(f"{ats_score}\n")
+
+            st.subheader("📊 ATS Score")
+
+            st.metric(
+                label="ATS Score",
+                value=f"{ats_score}%"
+            )
+
+            st.progress(int(ats_score))
+
 
             missing_skills = list(
                 set(job_skills) -
                 set(resume_skills)
             )
+
 
             st.markdown("---")
             st.subheader("📊 ATS Dashboard")
@@ -411,6 +466,20 @@ Skill Gaps:
 # RECENT ANALYSES
 # =========================
 
+=======
+            st.subheader("❌ Missing Skills")
+
+            if missing_skills:
+                for skill in missing_skills:
+                    st.warning(skill)
+            else:
+                st.success(
+                    "Excellent! No missing skills found."
+                )
+
+# -----------------------------
+# Recent Analyses Page
+# -----------------------------
 elif menu == "📜 Recent Analyses":
 
     st.title("📜 Recent Analyses")
@@ -440,6 +509,21 @@ elif menu == "📜 Recent Analyses":
 # ATS STATISTICS
 # =========================
 
+=======
+    st.info(
+        "This feature will store previous resume analyses."
+    )
+
+    st.write("""
+    Future Features:
+    - View previous ATS scores
+    - Compare resumes
+    - Track improvements
+    """)
+
+# -----------------------------
+# ATS Statistics Page
+# -----------------------------
 elif menu == "📊 ATS Statistics":
 
     st.title("📊 ATS Statistics")
@@ -491,11 +575,27 @@ elif menu == "📊 ATS Statistics":
 # ABOUT PAGE
 # =========================
 
-elif menu == "ℹ️ About Project":
-
-    st.title("ℹ️ About Project")
+=======
+    st.info(
+        "Analytics dashboard coming soon."
+    )
 
     st.write("""
+    Planned Features:
+    - Average ATS Score
+    - Skill Match Percentage
+    - Resume Performance Trends
+    """)
+
+# -----------------------------
+# About Project Page
+# -----------------------------
+elif menu == "ℹ️ About Project":
+
+st.title("ℹ️ About Project")
+
+st.write("""
+<<<<<<< HEAD
 AI Resume Analyzer is an NLP-powered application that compares resumes against job descriptions.
 
 ### Features
@@ -525,6 +625,25 @@ AI Resume Analyzer is an NLP-powered application that compares resumes against j
 • PyPDF2
 """)
 
-    st.success(
+st.success(
         "AI / ML / NLP Portfolio Project"
-    )
+=======
+    AI Resume Analyzer is an NLP-based project that helps job seekers improve their resumes.
+
+    Features:
+    ✅ Resume PDF Parsing
+    ✅ Skill Extraction
+    ✅ ATS Score Calculation
+    ✅ Missing Skill Detection
+    ✅ Job Description Matching
+
+    Technologies Used:
+    - Python
+    - Streamlit
+    - NLP
+    - PyPDF2
+    """)
+
+    st.success(
+        "Created as an AI/ML/NLP project."
+        )
