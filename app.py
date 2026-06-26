@@ -329,7 +329,7 @@ ATS Score: {ats_score}%
             for project in project_recommendations[job_role]:
                 st.success(f"⭐ {project}")
 
-            # AI Suggestions
+         # AI Suggestions
             st.subheader("🤖 AI Suggestions")
 
             if missing_skills:
