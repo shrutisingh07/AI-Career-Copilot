@@ -595,7 +595,6 @@ elif menu == "ℹ️ About Project":
 st.title("ℹ️ About Project")
 
 st.write("""
-<<<<<<< HEAD
 AI Resume Analyzer is an NLP-powered application that compares resumes against job descriptions.
 
 ### Features
@@ -627,7 +626,6 @@ AI Resume Analyzer is an NLP-powered application that compares resumes against j
 
 st.success(
         "AI / ML / NLP Portfolio Project"
-=======
     AI Resume Analyzer is an NLP-based project that helps job seekers improve their resumes.
 
     Features:
