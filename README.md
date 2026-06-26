@@ -1,6 +1,7 @@
 # AI Career Copilot 
 
-An AI-powered web application that analyzes resumes, extracts key skills, and provides insights to help improve job applications.
+An AI-powered Career Copilot that analyzes resumes, predicts ATS scores, identifies skill gaps, generates interview questions, and creates personalized learning roadmaps.
+
 
 ## Live Demo
 
@@ -8,19 +9,27 @@ https://airesumeanalyzer-urawcyzcnwczpa8ftrte7h.streamlit.app/
 
 ## Features
 
-* Resume Upload (PDF)
-* Skill Extraction
-* Resume Analysis
-* ATS-Friendly Insights
-* Personalized Recommendations
+* Resume PDF Parsing
+* ATS Score Prediction
+* Skill Extraction using NLP
+* Missing Skill Detection
+* Skill Match Visualization
+* Career Skill Gap Analysis
+* AI Interview Question Generator
+* Personalized Learning Roadmap
+* Role Recommendations
+* Download ATS Report
 
 ## Tech Stack
 
-* Python
-* Streamlit
-* NLP
-* Pandas
-* PDF Processing
+- Python
+- Streamlit
+- NLP
+- Pandas
+- PyPDF
+- Git
+- GitHub
+
 
 ## How It Works
 
@@ -42,12 +51,6 @@ https://airesumeanalyzer-urawcyzcnwczpa8ftrte7h.streamlit.app/
 ### Skills Extraction
 ![Skills]<img width="959" height="484" alt="Skills extracted , recommendations" src="https://github.com/user-attachments/assets/830e0c05-c328-4e24-81db-09ee3c996116" />
 
-## Future Improvements
-
-* ATS Score Calculation
-* Skill Gap Analysis
-* Interview Question Generation
-* Learning Roadmap Recommendations
 
 ## Author
 
